@@ -1,0 +1,957 @@
+2020-10-14 09:24:26 -              hsciMain.py:  10 -     INFO:Start running hsciMain
+2020-10-14 09:24:26 -              hsciMain.py:  17 -     INFO:Start updating HSCI Historical Change File
+2020-10-14 09:24:26 -              hsciMain.py:  21 -     INFO:Deleted old HSCI Historical Change File
+2020-10-14 09:24:26 -            updateHSCI.py:  23 -     INFO:
+        chromedriver exists.
+        Start scraping HSCI historical change from https://www.hsi.com.hk/eng/indexes/all-indexes/hsci
+        
+2020-10-14 09:24:27 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"prefs": {"download.default_directory": "/Users/kayinman2/Desktop/Github/HSCI Simulation/Raw Data Files", "download.prompt_for_download": false}, "extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"prefs": {"download.default_directory": "/Users/kayinman2/Desktop/Github/HSCI Simulation/Raw Data Files", "download.prompt_for_download": false}, "extensions": [], "args": ["--headless"]}}}
+2020-10-14 09:24:27 -        connectionpool.py: 205 -    DEBUG:Starting new HTTP connection (1): 127.0.0.1:65089
+2020-10-14 09:24:29 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session HTTP/1.1" 200 726
+2020-10-14 09:24:29 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:29 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/url {"url": "https://www.hsi.com.hk/eng/indexes/all-indexes/hsci"}
+2020-10-14 09:24:30 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/url HTTP/1.1" 200 14
+2020-10-14 09:24:30 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:30 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/element {"using": "css selector", "value": "[id=\"constituentsSelect\"]"}
+2020-10-14 09:24:30 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/element HTTP/1.1" 404 1955
+2020-10-14 09:24:30 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:30 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/element {"using": "css selector", "value": "[id=\"constituentsSelect\"]"}
+2020-10-14 09:24:30 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/element HTTP/1.1" 200 88
+2020-10-14 09:24:30 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:30 -     remote_connection.py: 388 -    DEBUG:GET http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/5d8d5551-0d91-4bc5-ad13-18622436d437/name {"id": "5d8d5551-0d91-4bc5-ad13-18622436d437"}
+2020-10-14 09:24:30 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "GET /session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/5d8d5551-0d91-4bc5-ad13-18622436d437/name HTTP/1.1" 200 18
+2020-10-14 09:24:30 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:30 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/execute/sync {"script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0>b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k<arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g<e;g++)g in c&&b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&&!r(\"iPod\")&&!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&&!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&&!(-1!=n.toLowerCase().indexOf(\"webkit\")&&!r(\"Edge\"))&&!(r(\"Trident\")||r(\"MSIE\"))&&!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&&!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&&(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&&F>parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&&y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&&!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&&!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&&!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&&!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&&!(8<=Number(G)),fa=y&&!(9<=Number(G));I&&M&&L(2.3);I&&M&&L(4);J&&M&&L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&&\"value\"==b&&R(a,\"INPUT\")?a.value:fa&&!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&&a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0<c&&(a=[a.slice(0,c),a.slice(c+1)],2==a.length&&b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&&\"value\"==b&&R(a,\"OPTION\")&&null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&&\"string\"!==typeof b&&(b=b.toString());return!!a&&1==a.nodeType&&(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"allowfullscreen allowpaymentrequest allowusermedia async autofocus autoplay checked compact complete controls declare default defaultchecked defaultselected defer disabled ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref nomodule noresize noshade novalidate nowrap open paused playsinline pubdate readonly required reversed scoped seamless seeking selected truespeed typemustmatch willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&&!f(e)&&(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&&T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&&a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&&\"src\"==c||g&&\"href\"==c)return(e=Q(a,c))&&(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&&1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u<U.length;u++)if(u in U&&U[u]===c){c=u;break a}c=-1}if(0<=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&&null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&&X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);", "args": [{"ELEMENT": "5d8d5551-0d91-4bc5-ad13-18622436d437", "element-6066-11e4-a52e-4f735466cecf": "5d8d5551-0d91-4bc5-ad13-18622436d437"}, "multiple"]}
+2020-10-14 09:24:30 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/execute/sync HTTP/1.1" 200 14
+2020-10-14 09:24:30 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:30 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/5d8d5551-0d91-4bc5-ad13-18622436d437/elements {"using": "xpath", "value": ".//option[normalize-space(.) = \"Hang Seng Composite Index\"]", "id": "5d8d5551-0d91-4bc5-ad13-18622436d437"}
+2020-10-14 09:24:31 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/5d8d5551-0d91-4bc5-ad13-18622436d437/elements HTTP/1.1" 200 90
+2020-10-14 09:24:31 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:31 -     remote_connection.py: 388 -    DEBUG:GET http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/f49f439d-f3dd-44a0-8ebb-d0151510e8b5/selected {"id": "f49f439d-f3dd-44a0-8ebb-d0151510e8b5"}
+2020-10-14 09:24:31 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "GET /session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/f49f439d-f3dd-44a0-8ebb-d0151510e8b5/selected HTTP/1.1" 200 15
+2020-10-14 09:24:31 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:31 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/f49f439d-f3dd-44a0-8ebb-d0151510e8b5/click {"id": "f49f439d-f3dd-44a0-8ebb-d0151510e8b5"}
+2020-10-14 09:24:31 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/element/f49f439d-f3dd-44a0-8ebb-d0151510e8b5/click HTTP/1.1" 200 14
+2020-10-14 09:24:31 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:31 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/element {"using": "xpath", "value": "//button[text()=\"View Now\"]"}
+2020-10-14 09:24:31 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/element HTTP/1.1" 200 88
+2020-10-14 09:24:31 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:31 -     remote_connection.py: 388 -    DEBUG:POST http://127.0.0.1:65089/session/50a0e2a70dff4ee5de8a99e9d7d93af7/execute/sync {"script": "arguments[0].click();", "args": [{"ELEMENT": "af2544bb-7ec1-42ad-8c3e-dd9b2b55f1da", "element-6066-11e4-a52e-4f735466cecf": "af2544bb-7ec1-42ad-8c3e-dd9b2b55f1da"}]}
+2020-10-14 09:24:31 -        connectionpool.py: 393 -    DEBUG:http://127.0.0.1:65089 "POST /session/50a0e2a70dff4ee5de8a99e9d7d93af7/execute/sync HTTP/1.1" 200 14
+2020-10-14 09:24:31 -     remote_connection.py: 440 -    DEBUG:Finished Request
+2020-10-14 09:24:31 -              hsciMain.py:  28 -     INFO:
+        Updated HSCI Historical Change File. Path:
+        /Users/kayinman2/Desktop/Github/HSCI Simulation/Raw Data Files/hsci_hist_change.xlsx
+        
+2020-10-14 09:24:31 -              hsciMain.py:  44 -     INFO:Start getting HSCI Trade File
+2020-10-14 09:24:32 -            updateHSCI.py: 140 -     INFO:Read Excel from /Users/kayinman2/Desktop/Github/HSCI Simulation/Raw Data Files/hsci_hist_change.xlsx
+2020-10-14 09:24:32 -            updateHSCI.py: 144 -     INFO:Cleaned Raw File
+2020-10-14 09:24:32 -            updateHSCI.py: 148 -     INFO:Got Review Type in Trade File [Interim, Regular]
+2020-10-14 09:24:32 -            updateHSCI.py: 152 -     INFO:Flagged out Name Change Cases
+2020-10-14 09:24:32 -            updateHSCI.py: 156 -     INFO:Got Hang Seng Sector
+2020-10-14 09:24:32 -            updateHSCI.py: 162 -     INFO:Got Trade Start Date and Trade End Date
+2020-10-14 09:24:32 -                 utils.py: 141 -     INFO:NumExpr defaulting to 8 threads.
+2020-10-14 09:24:32 -            updateHSCI.py: 165 -     INFO:Got BBG Ticker
+2020-10-14 09:24:32 -              hsciMain.py:  49 -     INFO:Start cleaning HSCI Trade File
+2020-10-14 09:24:32 -          backtestHSCI.py:  66 -     INFO:Created Trade Id
+2020-10-14 09:24:32 -          backtestHSCI.py:  73 -     INFO:Adjusted End Date beyond Today
+2020-10-14 09:24:32 -          backtestHSCI.py:  77 -     INFO:Updated re-used BBG ticker
+2020-10-14 09:24:32 -          backtestHSCI.py:  81 -     INFO:Adjusted Start Date and End Date based on Holidays
+2020-10-14 09:24:32 -              hsciMain.py:  53 -     INFO:Start getting Final Trading Log and BackTesting File
+2020-10-14 09:24:32 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-09-22
+2020-10-14 09:24:32 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-09-22
+2020-10-14 09:24:32 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-09-22
+2020-10-14 09:24:32 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:32 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:32 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:32 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-09-22
+2020-10-14 09:24:32 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-09-22
+2020-10-14 09:24:32 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-09-22
+2020-10-14 09:24:32 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-09-07
+2020-10-14 09:24:32 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-09-07
+2020-10-14 09:24:32 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-09-07
+2020-10-14 09:24:32 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:32 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:32 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:32 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-09-07
+2020-10-14 09:24:32 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-09-07
+2020-10-14 09:24:32 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-09-07
+2020-10-14 09:24:32 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-07-27
+2020-10-14 09:24:32 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-07-27
+2020-10-14 09:24:32 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-07-27
+2020-10-14 09:24:32 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:32 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:32 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:32 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-07-27
+2020-10-14 09:24:32 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-07-27
+2020-10-14 09:24:32 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-07-27
+2020-10-14 09:24:32 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-07-20
+2020-10-14 09:24:32 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-07-20
+2020-10-14 09:24:33 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-07-20
+2020-10-14 09:24:33 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:33 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:33 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:33 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-07-20
+2020-10-14 09:24:33 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-07-20
+2020-10-14 09:24:33 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-07-20
+2020-10-14 09:24:33 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-07-06
+2020-10-14 09:24:33 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-07-06
+2020-10-14 09:24:33 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-07-06
+2020-10-14 09:24:33 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:33 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:33 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:33 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-07-06
+2020-10-14 09:24:33 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-07-06
+2020-10-14 09:24:33 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-07-06
+2020-10-14 09:24:33 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-06-26
+2020-10-14 09:24:33 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-06-26
+2020-10-14 09:24:33 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-06-26
+2020-10-14 09:24:33 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:33 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:33 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:33 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-06-26
+2020-10-14 09:24:33 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-06-26
+2020-10-14 09:24:33 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-06-26
+2020-10-14 09:24:33 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-06-19
+2020-10-14 09:24:33 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-06-19
+2020-10-14 09:24:33 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-06-19
+2020-10-14 09:24:33 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:33 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:33 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:33 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-06-19
+2020-10-14 09:24:33 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-06-19
+2020-10-14 09:24:33 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-06-19
+2020-10-14 09:24:33 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-05-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-05-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-05-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:33 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:33 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:33 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-05-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-05-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-05-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-03-09
+2020-10-14 09:24:33 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-03-09
+2020-10-14 09:24:33 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-03-09
+2020-10-14 09:24:33 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:33 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:33 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:33 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-03-09
+2020-10-14 09:24:33 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-03-09
+2020-10-14 09:24:33 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-03-09
+2020-10-14 09:24:33 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2020-02-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2020-02-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2020-02-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:33 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:33 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:33 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2020-02-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2020-02-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2020-02-18
+2020-10-14 09:24:33 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-12-27
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-12-27
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-12-27
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-12-27
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-12-27
+2020-10-14 09:24:34 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-12-27
+2020-10-14 09:24:34 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-12-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-12-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-12-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-12-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-12-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-12-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-10-29
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-10-29
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-10-29
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-10-29
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-10-29
+2020-10-14 09:24:34 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-10-29
+2020-10-14 09:24:34 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-10-16
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-10-16
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-10-16
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-10-16
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-10-16
+2020-10-14 09:24:34 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-10-16
+2020-10-14 09:24:34 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-09-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-09-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-09-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-09-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-09-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-09-09
+2020-10-14 09:24:34 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-07-25
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-07-25
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-07-25
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-07-25
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-07-25
+2020-10-14 09:24:34 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-07-25
+2020-10-14 09:24:34 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-07-10
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-07-10
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-07-10
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-07-10
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-07-10
+2020-10-14 09:24:34 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-07-10
+2020-10-14 09:24:34 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-06-17
+2020-10-14 09:24:34 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-06-17
+2020-10-14 09:24:34 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-06-17
+2020-10-14 09:24:34 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:34 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:34 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:34 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-06-17
+2020-10-14 09:24:34 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-06-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-06-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-03-19
+2020-10-14 09:24:35 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-03-19
+2020-10-14 09:24:35 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-03-19
+2020-10-14 09:24:35 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:35 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:35 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:35 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-03-19
+2020-10-14 09:24:35 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-03-19
+2020-10-14 09:24:35 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-03-19
+2020-10-14 09:24:35 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2019-03-11
+2020-10-14 09:24:35 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2019-03-11
+2020-10-14 09:24:35 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2019-03-11
+2020-10-14 09:24:35 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:35 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:35 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:35 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2019-03-11
+2020-10-14 09:24:35 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2019-03-11
+2020-10-14 09:24:35 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2019-03-11
+2020-10-14 09:24:35 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-12-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-12-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-12-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:35 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:35 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:35 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-12-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-12-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-12-17
+2020-10-14 09:24:35 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-12-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-12-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-12-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:35 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:35 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:35 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-12-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-12-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-12-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-10-08
+2020-10-14 09:24:35 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-10-08
+2020-10-14 09:24:35 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-10-08
+2020-10-14 09:24:35 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:35 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:35 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:35 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-10-08
+2020-10-14 09:24:35 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-10-08
+2020-10-14 09:24:35 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-10-08
+2020-10-14 09:24:35 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-09-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-09-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-09-10
+2020-10-14 09:24:35 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:35 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:35 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:36 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-09-10
+2020-10-14 09:24:36 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-09-10
+2020-10-14 09:24:36 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-09-10
+2020-10-14 09:24:36 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-07-23
+2020-10-14 09:24:36 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-07-23
+2020-10-14 09:24:36 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-07-23
+2020-10-14 09:24:36 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:36 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:36 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:36 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-07-23
+2020-10-14 09:24:36 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-07-23
+2020-10-14 09:24:36 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-07-23
+2020-10-14 09:24:36 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-07-12
+2020-10-14 09:24:36 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-07-12
+2020-10-14 09:24:36 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-07-12
+2020-10-14 09:24:36 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:36 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:36 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:36 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-07-12
+2020-10-14 09:24:36 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-07-12
+2020-10-14 09:24:36 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-07-12
+2020-10-14 09:24:36 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-06-04
+2020-10-14 09:24:36 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-06-04
+2020-10-14 09:24:36 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-06-04
+2020-10-14 09:24:36 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:36 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:36 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:36 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-06-04
+2020-10-14 09:24:36 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-06-04
+2020-10-14 09:24:36 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-06-04
+2020-10-14 09:24:36 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-03-05
+2020-10-14 09:24:36 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-03-05
+2020-10-14 09:24:36 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-03-05
+2020-10-14 09:24:36 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:36 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:36 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:36 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-03-05
+2020-10-14 09:24:36 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-03-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-03-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2018-02-07
+2020-10-14 09:24:37 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2018-02-07
+2020-10-14 09:24:37 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2018-02-07
+2020-10-14 09:24:37 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:37 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:37 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:37 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2018-02-07
+2020-10-14 09:24:37 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2018-02-07
+2020-10-14 09:24:37 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2018-02-07
+2020-10-14 09:24:37 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-12-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-12-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-12-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:37 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:37 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:37 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-12-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-12-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-12-05
+2020-10-14 09:24:37 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-12-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-12-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-12-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:37 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:37 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:37 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-12-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-12-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-12-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-11-23
+2020-10-14 09:24:37 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-11-23
+2020-10-14 09:24:37 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-11-23
+2020-10-14 09:24:37 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:37 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:37 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:37 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-11-23
+2020-10-14 09:24:37 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-11-23
+2020-10-14 09:24:37 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-11-23
+2020-10-14 09:24:37 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-09-20
+2020-10-14 09:24:37 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-09-20
+2020-10-14 09:24:37 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-09-20
+2020-10-14 09:24:37 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:37 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:37 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:37 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-09-20
+2020-10-14 09:24:37 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-09-20
+2020-10-14 09:24:37 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-09-20
+2020-10-14 09:24:37 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-09-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-09-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-09-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:37 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:37 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:37 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-09-04
+2020-10-14 09:24:37 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-09-04
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-09-04
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-07-19
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-07-19
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-07-19
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-07-19
+2020-10-14 09:24:38 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-07-19
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-07-19
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-07-18
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-07-18
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-07-18
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-07-18
+2020-10-14 09:24:38 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-07-18
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-07-18
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-07-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-07-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-07-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-07-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-07-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-07-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-06-12
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-06-12
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-06-12
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-06-12
+2020-10-14 09:24:38 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-06-12
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-06-12
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-05-16
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-05-16
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-05-16
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-05-16
+2020-10-14 09:24:38 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-05-16
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-05-16
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-05-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-05-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-05-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-05-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-05-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-05-11
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-03-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-03-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-03-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-03-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-03-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-03-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2017-01-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2017-01-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2017-01-06
+2020-10-14 09:24:38 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:38 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:38 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:38 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2017-01-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2017-01-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2017-01-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-12-08
+2020-10-14 09:24:39 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-12-08
+2020-10-14 09:24:39 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-12-08
+2020-10-14 09:24:39 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:39 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:39 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:39 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-12-08
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-12-08
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-12-08
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-10-25
+2020-10-14 09:24:39 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-10-25
+2020-10-14 09:24:39 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-10-25
+2020-10-14 09:24:39 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:39 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:39 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:39 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-10-25
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-10-25
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-10-25
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-10-13
+2020-10-14 09:24:39 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-10-13
+2020-10-14 09:24:39 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-10-13
+2020-10-14 09:24:39 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:39 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:39 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:39 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-10-13
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-10-13
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-10-13
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-09-23
+2020-10-14 09:24:39 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-09-23
+2020-10-14 09:24:39 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-09-23
+2020-10-14 09:24:39 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:39 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:39 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:39 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-09-23
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-09-23
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-09-23
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-09-05
+2020-10-14 09:24:39 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-09-05
+2020-10-14 09:24:39 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-09-05
+2020-10-14 09:24:39 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:39 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:39 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:39 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-09-05
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-09-05
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-09-05
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-07-11
+2020-10-14 09:24:39 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-07-11
+2020-10-14 09:24:39 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-07-11
+2020-10-14 09:24:39 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:39 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:39 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:39 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-07-11
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-07-11
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-07-11
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-06-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-06-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-06-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:39 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:39 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:39 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-06-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-06-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-06-06
+2020-10-14 09:24:39 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2016-03-14
+2020-10-14 09:24:40 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2016-03-14
+2020-10-14 09:24:40 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2016-03-14
+2020-10-14 09:24:40 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:40 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:40 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:40 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2016-03-14
+2020-10-14 09:24:40 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2016-03-14
+2020-10-14 09:24:40 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2016-03-14
+2020-10-14 09:24:40 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-12-31
+2020-10-14 09:24:40 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-12-31
+2020-10-14 09:24:40 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-12-31
+2020-10-14 09:24:40 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:40 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:40 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:40 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-12-31
+2020-10-14 09:24:40 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-12-31
+2020-10-14 09:24:40 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-12-31
+2020-10-14 09:24:40 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-12-07
+2020-10-14 09:24:40 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-12-07
+2020-10-14 09:24:40 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-12-07
+2020-10-14 09:24:40 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:40 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:40 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:40 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-12-07
+2020-10-14 09:24:40 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-12-07
+2020-10-14 09:24:40 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-12-07
+2020-10-14 09:24:40 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-10-12
+2020-10-14 09:24:40 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-10-12
+2020-10-14 09:24:40 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-10-12
+2020-10-14 09:24:40 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:40 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:40 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:40 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-10-12
+2020-10-14 09:24:40 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-10-12
+2020-10-14 09:24:40 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-10-12
+2020-10-14 09:24:40 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-09-14
+2020-10-14 09:24:41 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-09-14
+2020-10-14 09:24:41 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-09-14
+2020-10-14 09:24:41 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:41 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:41 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:41 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-09-14
+2020-10-14 09:24:41 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-09-14
+2020-10-14 09:24:41 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-09-14
+2020-10-14 09:24:41 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-07-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-07-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-07-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:41 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:41 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:41 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-07-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-07-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-07-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-07-13
+2020-10-14 09:24:41 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-07-13
+2020-10-14 09:24:41 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-07-13
+2020-10-14 09:24:41 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:41 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:41 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:41 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-07-13
+2020-10-14 09:24:41 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-07-13
+2020-10-14 09:24:41 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-07-13
+2020-10-14 09:24:41 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-06-03
+2020-10-14 09:24:41 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-06-03
+2020-10-14 09:24:41 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-06-03
+2020-10-14 09:24:41 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:41 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:41 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:41 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-06-03
+2020-10-14 09:24:41 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-06-03
+2020-10-14 09:24:41 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-06-03
+2020-10-14 09:24:41 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-05-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-05-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-05-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:41 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:41 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:41 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-05-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-05-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-05-27
+2020-10-14 09:24:41 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-05-21
+2020-10-14 09:24:41 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-05-21
+2020-10-14 09:24:41 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-05-21
+2020-10-14 09:24:41 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:41 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:41 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:41 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-05-21
+2020-10-14 09:24:41 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-05-21
+2020-10-14 09:24:41 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-05-21
+2020-10-14 09:24:41 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-03-26
+2020-10-14 09:24:41 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-03-26
+2020-10-14 09:24:41 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-03-26
+2020-10-14 09:24:41 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:41 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:41 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:41 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-03-26
+2020-10-14 09:24:41 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-03-26
+2020-10-14 09:24:42 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-03-26
+2020-10-14 09:24:42 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-03-18
+2020-10-14 09:24:42 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-03-18
+2020-10-14 09:24:42 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-03-18
+2020-10-14 09:24:42 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:42 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:42 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:42 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-03-18
+2020-10-14 09:24:42 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-03-18
+2020-10-14 09:24:42 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-03-18
+2020-10-14 09:24:42 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2015-03-09
+2020-10-14 09:24:42 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2015-03-09
+2020-10-14 09:24:42 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2015-03-09
+2020-10-14 09:24:42 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:42 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:42 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:42 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2015-03-09
+2020-10-14 09:24:42 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2015-03-09
+2020-10-14 09:24:42 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2015-03-09
+2020-10-14 09:24:42 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-12-08
+2020-10-14 09:24:42 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-12-08
+2020-10-14 09:24:42 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-12-08
+2020-10-14 09:24:42 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:42 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:42 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:42 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-12-08
+2020-10-14 09:24:42 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-12-08
+2020-10-14 09:24:42 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-12-08
+2020-10-14 09:24:42 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-10-20
+2020-10-14 09:24:42 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-10-20
+2020-10-14 09:24:42 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-10-20
+2020-10-14 09:24:42 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:42 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:42 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:42 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-10-20
+2020-10-14 09:24:42 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-10-20
+2020-10-14 09:24:43 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-10-20
+2020-10-14 09:24:43 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-09-29
+2020-10-14 09:24:43 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-09-29
+2020-10-14 09:24:43 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-09-29
+2020-10-14 09:24:43 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:43 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:43 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:43 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-09-29
+2020-10-14 09:24:43 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-09-29
+2020-10-14 09:24:43 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-09-29
+2020-10-14 09:24:43 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-09-08
+2020-10-14 09:24:43 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-09-08
+2020-10-14 09:24:43 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-09-08
+2020-10-14 09:24:43 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:43 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:43 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:43 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-09-08
+2020-10-14 09:24:43 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-09-08
+2020-10-14 09:24:43 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-09-08
+2020-10-14 09:24:43 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-08-04
+2020-10-14 09:24:43 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-08-04
+2020-10-14 09:24:43 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-08-04
+2020-10-14 09:24:43 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:43 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:43 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:43 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-08-04
+2020-10-14 09:24:43 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-08-04
+2020-10-14 09:24:43 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-08-04
+2020-10-14 09:24:43 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-05-19
+2020-10-14 09:24:43 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-05-19
+2020-10-14 09:24:43 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-05-19
+2020-10-14 09:24:43 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:43 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:43 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:43 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-05-19
+2020-10-14 09:24:43 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-05-19
+2020-10-14 09:24:43 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-05-19
+2020-10-14 09:24:43 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-04-02
+2020-10-14 09:24:43 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-04-02
+2020-10-14 09:24:43 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-04-02
+2020-10-14 09:24:43 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:43 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:43 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:43 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-04-02
+2020-10-14 09:24:43 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-04-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-04-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2014-03-10
+2020-10-14 09:24:44 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2014-03-10
+2020-10-14 09:24:44 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2014-03-10
+2020-10-14 09:24:44 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:44 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:44 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:44 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2014-03-10
+2020-10-14 09:24:44 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2014-03-10
+2020-10-14 09:24:44 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2014-03-10
+2020-10-14 09:24:44 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2013-10-21
+2020-10-14 09:24:44 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2013-10-21
+2020-10-14 09:24:44 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2013-10-21
+2020-10-14 09:24:44 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:44 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:44 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:44 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2013-10-21
+2020-10-14 09:24:44 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2013-10-21
+2020-10-14 09:24:44 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2013-10-21
+2020-10-14 09:24:44 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2013-09-09
+2020-10-14 09:24:44 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2013-09-09
+2020-10-14 09:24:44 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2013-09-09
+2020-10-14 09:24:44 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:44 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:44 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:44 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2013-09-09
+2020-10-14 09:24:44 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2013-09-09
+2020-10-14 09:24:44 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2013-09-09
+2020-10-14 09:24:44 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2013-09-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2013-09-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2013-09-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:44 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:44 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:44 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2013-09-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2013-09-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2013-09-02
+2020-10-14 09:24:44 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2013-03-18
+2020-10-14 09:24:44 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2013-03-18
+2020-10-14 09:24:44 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2013-03-18
+2020-10-14 09:24:44 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:45 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:45 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:45 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2013-03-18
+2020-10-14 09:24:45 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2013-03-18
+2020-10-14 09:24:45 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2013-03-18
+2020-10-14 09:24:45 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2013-03-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2013-03-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2013-03-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:45 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:45 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:45 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2013-03-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2013-03-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2013-03-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-09-10
+2020-10-14 09:24:45 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-09-10
+2020-10-14 09:24:45 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-09-10
+2020-10-14 09:24:45 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:45 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:45 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:45 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-09-10
+2020-10-14 09:24:45 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-09-10
+2020-10-14 09:24:45 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-09-10
+2020-10-14 09:24:45 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-08-06
+2020-10-14 09:24:45 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-08-06
+2020-10-14 09:24:45 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-08-06
+2020-10-14 09:24:45 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:45 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:45 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:45 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-08-06
+2020-10-14 09:24:45 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-08-06
+2020-10-14 09:24:45 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-08-06
+2020-10-14 09:24:45 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-06-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-06-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-06-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:45 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:45 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:45 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-06-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-06-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-06-04
+2020-10-14 09:24:45 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-05-14
+2020-10-14 09:24:45 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-05-14
+2020-10-14 09:24:45 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-05-14
+2020-10-14 09:24:45 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:46 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:46 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:46 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-05-14
+2020-10-14 09:24:46 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-05-14
+2020-10-14 09:24:46 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-05-14
+2020-10-14 09:24:46 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-04-30
+2020-10-14 09:24:46 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-04-30
+2020-10-14 09:24:46 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-04-30
+2020-10-14 09:24:46 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:46 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:46 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:46 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-04-30
+2020-10-14 09:24:46 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-04-30
+2020-10-14 09:24:46 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-04-30
+2020-10-14 09:24:46 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-03-05
+2020-10-14 09:24:46 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-03-05
+2020-10-14 09:24:46 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-03-05
+2020-10-14 09:24:46 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:46 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:46 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:46 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-03-05
+2020-10-14 09:24:46 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-03-05
+2020-10-14 09:24:46 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-03-05
+2020-10-14 09:24:46 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-01-13
+2020-10-14 09:24:46 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-01-13
+2020-10-14 09:24:46 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-01-13
+2020-10-14 09:24:46 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:46 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:46 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:46 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-01-13
+2020-10-14 09:24:46 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-01-13
+2020-10-14 09:24:46 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-01-13
+2020-10-14 09:24:46 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2012-01-03
+2020-10-14 09:24:46 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2012-01-03
+2020-10-14 09:24:46 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2012-01-03
+2020-10-14 09:24:46 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:46 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:46 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:46 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2012-01-03
+2020-10-14 09:24:46 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2012-01-03
+2020-10-14 09:24:46 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2012-01-03
+2020-10-14 09:24:46 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2011-12-12
+2020-10-14 09:24:46 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2011-12-12
+2020-10-14 09:24:46 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2011-12-12
+2020-10-14 09:24:46 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:46 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:46 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:46 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2011-12-12
+2020-10-14 09:24:46 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2011-12-12
+2020-10-14 09:24:46 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2011-12-12
+2020-10-14 09:24:46 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2011-11-07
+2020-10-14 09:24:46 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2011-11-07
+2020-10-14 09:24:46 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2011-11-07
+2020-10-14 09:24:46 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:46 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:46 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:46 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2011-11-07
+2020-10-14 09:24:46 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2011-11-07
+2020-10-14 09:24:46 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2011-11-07
+2020-10-14 09:24:46 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2011-09-05
+2020-10-14 09:24:47 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2011-09-05
+2020-10-14 09:24:47 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2011-09-05
+2020-10-14 09:24:47 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:47 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:47 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:47 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2011-09-05
+2020-10-14 09:24:47 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2011-09-05
+2020-10-14 09:24:47 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2011-09-05
+2020-10-14 09:24:47 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2011-07-11
+2020-10-14 09:24:47 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2011-07-11
+2020-10-14 09:24:47 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2011-07-11
+2020-10-14 09:24:47 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:47 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:47 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:47 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2011-07-11
+2020-10-14 09:24:47 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2011-07-11
+2020-10-14 09:24:47 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2011-07-11
+2020-10-14 09:24:47 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2011-05-16
+2020-10-14 09:24:47 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2011-05-16
+2020-10-14 09:24:47 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2011-05-16
+2020-10-14 09:24:47 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:47 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:47 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:47 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2011-05-16
+2020-10-14 09:24:47 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2011-05-16
+2020-10-14 09:24:47 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2011-05-16
+2020-10-14 09:24:47 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2011-03-07
+2020-10-14 09:24:47 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2011-03-07
+2020-10-14 09:24:47 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2011-03-07
+2020-10-14 09:24:47 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:47 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:47 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:47 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2011-03-07
+2020-10-14 09:24:47 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2011-03-07
+2020-10-14 09:24:48 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2011-03-07
+2020-10-14 09:24:48 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2010-12-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2010-12-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2010-12-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:48 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:48 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:48 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2010-12-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2010-12-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2010-12-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2010-11-12
+2020-10-14 09:24:48 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2010-11-12
+2020-10-14 09:24:48 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2010-11-12
+2020-10-14 09:24:48 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:48 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:48 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:48 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2010-11-12
+2020-10-14 09:24:48 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2010-11-12
+2020-10-14 09:24:48 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2010-11-12
+2020-10-14 09:24:48 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2010-09-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2010-09-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2010-09-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:48 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:48 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:48 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2010-09-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2010-09-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2010-09-06
+2020-10-14 09:24:48 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2010-08-09
+2020-10-14 09:24:48 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2010-08-09
+2020-10-14 09:24:48 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2010-08-09
+2020-10-14 09:24:48 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:48 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:48 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:48 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2010-08-09
+2020-10-14 09:24:48 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2010-08-09
+2020-10-14 09:24:48 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2010-08-09
+2020-10-14 09:24:48 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2010-05-17
+2020-10-14 09:24:48 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2010-05-17
+2020-10-14 09:24:48 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2010-05-17
+2020-10-14 09:24:48 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:48 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:48 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:48 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2010-05-17
+2020-10-14 09:24:48 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2010-05-17
+2020-10-14 09:24:48 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2010-05-17
+2020-10-14 09:24:48 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2010-05-10
+2020-10-14 09:24:48 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2010-05-10
+2020-10-14 09:24:48 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2010-05-10
+2020-10-14 09:24:48 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:48 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:48 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:48 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2010-05-10
+2020-10-14 09:24:48 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2010-05-10
+2020-10-14 09:24:48 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2010-05-10
+2020-10-14 09:24:48 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2010-03-08
+2020-10-14 09:24:48 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2010-03-08
+2020-10-14 09:24:48 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2010-03-08
+2020-10-14 09:24:48 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:49 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:49 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:49 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2010-03-08
+2020-10-14 09:24:49 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2010-03-08
+2020-10-14 09:24:49 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2010-03-08
+2020-10-14 09:24:49 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2009-09-07
+2020-10-14 09:24:49 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2009-09-07
+2020-10-14 09:24:49 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2009-09-07
+2020-10-14 09:24:49 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:49 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:49 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:49 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2009-09-07
+2020-10-14 09:24:49 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2009-09-07
+2020-10-14 09:24:50 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2009-09-07
+2020-10-14 09:24:50 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2009-03-09
+2020-10-14 09:24:50 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2009-03-09
+2020-10-14 09:24:50 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2009-03-09
+2020-10-14 09:24:50 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:50 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:50 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:50 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2009-03-09
+2020-10-14 09:24:50 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2009-03-09
+2020-10-14 09:24:50 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2009-03-09
+2020-10-14 09:24:50 -          backtestHSCI.py: 237 -     INFO:Updateing Effective Date: 2009-01-05
+2020-10-14 09:24:50 -          backtestHSCI.py: 258 -     INFO:Got Price Data from Raw Data Files for Effective Date: 2009-01-05
+2020-10-14 09:24:50 -          backtestHSCI.py: 263 -     INFO:Reconstructed Price Data for Effective Date: 2009-01-05
+2020-10-14 09:24:50 -          backtestHSCI.py: 108 -     INFO:Got Halt Flag
+2020-10-14 09:24:50 -          backtestHSCI.py: 116 -     INFO:Got IPO Date and Delist Date
+2020-10-14 09:24:50 -          backtestHSCI.py: 128 -     INFO:Got IPO Return
+2020-10-14 09:24:50 -          backtestHSCI.py: 267 -     INFO:Adjusted Trade Start End Date based on Halt Flag, IPO Date and Delist Date for Effective Date: 2009-01-05
+2020-10-14 09:24:50 -          backtestHSCI.py: 273 -     INFO:Got Final Trade DataFrame with Beta for Effective Date: 2009-01-05
+2020-10-14 09:24:50 -          backtestHSCI.py: 283 -     INFO:Got BackTesting Returns for Effective Date: 2009-01-05
+2020-10-14 09:24:52 -          backtestHSCI.py: 296 -     INFO:
+        Output Trade DataFrame to:
+        /Users/kayinman2/Desktop/Github/HSCI Simulation/Output Files/hsci_trade_file.csv
+        Output BackTest DataFrame to:
+        /Users/kayinman2/Desktop/Github/HSCI Simulation/Output Files/hsci_backtest_file.csv
+        
